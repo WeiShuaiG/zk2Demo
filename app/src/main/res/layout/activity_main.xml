@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context="com.umeng.soexample.zk2demo.MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/shou_gjc_fen"
+            android:layout_width="@dimen/dp_24"
+            android:layout_height="@dimen/dp_24"
+            android:padding="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_36"
+            android:layout_marginLeft="@dimen/dp_24"
+            android:layout_gravity="center_vertical"
+            android:background="@mipmap/common_nav_btn_menu_n_hdpi"
+            />
+        <EditText
+            android:id="@+id/shou_gjc_sou"
+            android:layout_marginTop="@dimen/dp_33"
+            android:hint="请输入要搜索的商品"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:background="@null"
+
+            android:textSize="@dimen/sp_12"
+            android:textColor="#666666"
+            android:layout_toRightOf="@id/shou_gjc_fen"
+            android:layout_width="@dimen/dp_230"
+            android:layout_height="@dimen/dp_30" />
+        <TextView
+            android:id="@+id/gjz_sou"
+            android:layout_width="wrap_content"
+            android:textSize="@dimen/sp_14"
+            android:layout_marginTop="@dimen/dp_36"
+            android:textColor="#666666"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:text="搜索"
+            android:layout_toRightOf="@id/shou_gjc_sou"
+            android:layout_height="wrap_content" />
+    </android.support.v7.widget.Toolbar>
+    <com.jcodecraeer.xrecyclerview.XRecyclerView
+        android:id="@+id/shou_gjz_recy"
+        android:layout_below="@id/toolbar"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/meiyou"
+        android:text="没有更多商品了"
+        android:layout_marginTop="@dimen/dp_50"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/shou_gjz_recy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/msg"
+        android:visibility="gone"
+        android:layout_below="@id/toolbar"
+        android:layout_marginTop="@dimen/dp_50"
+        android:layout_centerHorizontal="true"
+        android:text="抱歉，没找到商品哦~"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+</RelativeLayout>
